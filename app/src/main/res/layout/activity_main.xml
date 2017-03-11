@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,21 +9,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="motive.speakup.MainActivity">
+    tools:context="motive.speakup.MainActivity"
+    android:background="?android:attr/panelBackground">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            android:layout_marginTop="43dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -34,16 +28,6 @@
             android:layout_alignTop="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
             android:text="pass" />
-
-        <TextView
-            android:text="Username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="53dp"
-            android:layout_marginTop="109dp"
-            android:id="@+id/textView3" />
 
         <TextView
             android:text="Password"
@@ -63,6 +47,35 @@
             android:id="@+id/editText2"
             android:layout_below="@+id/textView3"
             android:layout_alignStart="@+id/textView3" />
+
+        <TextView
+            android:text="Username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="151dp"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="63dp"
+            android:id="@+id/button"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo"
+            android:id="@+id/imageView"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
 </RelativeLayout>
