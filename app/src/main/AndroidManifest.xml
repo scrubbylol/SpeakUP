@@ -16,7 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".FeelActivity" />
-        <activity android:name=".NewsActivity"></activity>
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news_actiity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
