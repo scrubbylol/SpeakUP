@@ -5,13 +5,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class FeelActivity extends AppCompatActivity {
+
+    private String whichName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feel);
+
+        Intent intent = getIntent(); // gets the previously created intent
+        whichName = intent.getStringExtra("name");
+        TextView feelText = (TextView) findViewById(R.id.feelText);
+        feelText.setText("How are you feeling today, " + whichName + "?");
+
         InitialStart();
     }
 
@@ -25,8 +37,7 @@ public class FeelActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                Intent intent = new Intent (FeelActivity.this, TabActivity.class);
-                startActivity(intent);
+                SendName();
             }
         });
 
@@ -35,8 +46,7 @@ public class FeelActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                Intent intent = new Intent (FeelActivity.this, TabActivity.class);
-                startActivity(intent);
+                SendName();
             }
         });
 
@@ -45,11 +55,15 @@ public class FeelActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                Intent intent = new Intent (FeelActivity.this, TabActivity.class);
-                startActivity(intent);
+                SendName();
             }
         });
 
     }
 
+    private void SendName() {
+        Intent intent = new Intent(FeelActivity.this, TabActivity.class);
+        intent.putExtra("name", whichName);
+        startActivity(intent);
+    }
 }

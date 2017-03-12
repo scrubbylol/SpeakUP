@@ -1,7 +1,6 @@
 package motive.speakup;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,14 +12,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class TabActivity extends AppCompatActivity {
@@ -39,6 +34,8 @@ public class TabActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+
+    private String whichName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +59,9 @@ public class TabActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                        .setAction("Action", null).show();*/
 
                 Intent intent = new Intent (TabActivity.this, MessageActivity.class);
                 startActivity(intent);
@@ -71,6 +69,10 @@ public class TabActivity extends AppCompatActivity {
         });
 
         getSupportActionBar().setTitle("StartUP");
+
+        Intent intent = getIntent(); // gets the previously created intent
+        whichName = intent.getStringExtra("name");
+        TextView feelText = (TextView) findViewById(R.id.feelText);
     }
 
     @Override
@@ -116,8 +118,18 @@ public class TabActivity extends AppCompatActivity {
                     Tab2Notifications tab2 = new Tab2Notifications();
                     return tab2;
                 case 2:
-                    Tab3Personal tab3 = new Tab3Personal();
-                    return tab3;
+                    Tab4Tracking tab4 = new Tab4Tracking();
+                    return tab4;
+                case 3:
+
+                    if (whichName.equals("ryan")) {
+                        Tab3PersonalRyan tab3 = new Tab3PersonalRyan();
+                        return tab3;
+                    } else {
+                        Tab3PersonalAnon tab3 = new Tab3PersonalAnon();
+                        return tab3;
+                    }
+
                 default:
                     return null;
             }
@@ -126,18 +138,20 @@ public class TabActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "NEWS";
+                    return "MOMENTS";
                 case 1:
-                    return "NOTIFICATIONS";
+                    return "UPDATES";
                 case 2:
-                    return "PERSONAL";
+                    return "TRACKING";
+                case 3:
+                    return "PROFILE";
             }
             return null;
         }

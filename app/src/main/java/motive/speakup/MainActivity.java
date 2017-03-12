@@ -10,8 +10,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String user = "";
-    String pass = "";
+    String pass = "pass";
     EditText username_field, password_field;
     ImageView logo;
 
@@ -36,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 username_field = (EditText)findViewById(R.id.username_field);
                 password_field = (EditText)findViewById(R.id.password_field);
 
-                if(username_field.getText().toString().equals(user) && password_field.getText().toString().equals(pass)){
+                if((username_field.getText().toString().equals("ryan") || username_field.getText().toString().equals("anon")) && password_field.getText().toString().equals(pass)){
+                    String sendName = username_field.getText().toString();
                     Intent intent = new Intent(MainActivity.this, FeelActivity.class);
+                    intent.putExtra("name", sendName);
                     startActivity(intent);
                 }
             }

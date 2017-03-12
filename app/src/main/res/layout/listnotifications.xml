@@ -36,6 +36,8 @@
         android:id="@+id/txtDate"
         android:gravity="right"
         android:textColor="@android:color/white"
-        android:textAlignment="textStart"/>
+        android:textAlignment="textStart"
+        android:textSize="10sp"
+        android:paddingLeft="3dp"/>
 
 </LinearLayout>
