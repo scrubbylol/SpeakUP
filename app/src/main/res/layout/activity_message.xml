@@ -10,12 +10,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="motive.speakup.MessageActivity"
     android:background="?android:attr/panelBackground"
-    android:theme="@android:style/Theme.Material.Wallpaper.NoTitleBar">
+    android:theme="@android:style/Theme.Material.Wallpaper.NoTitleBar"
+    android:tag="Msg">
 
     <ListView
         android:id="@+id/msgList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:headerDividersEnabled="false"
-        android:footerDividersEnabled="false"/>
+        android:footerDividersEnabled="false"
+        style="@style/Widget.AppCompat.ListView.Menu"
+        android:dividerHeight="1dp"
+        android:tag="msg" />
 </RelativeLayout>

@@ -1,43 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="5dp"
     android:weightSum="1">
 
+    <TextView
+        android:id="@+id/txtWho"
+        android:layout_width="47dp"
+        android:textStyle="normal|bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:textAlignment="textStart"
+        android:text="you"
+        android:layout_height="20dp"
+        android:layout_marginBottom="5dp"/>
+
     <LinearLayout
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="67dp">
+        android:layout_height="67dp"
+        android:layout_weight="0.10">
 
         <TextView
-            android:id="@+id/txtName"
+            android:id="@+id/txtDesc"
             android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:textStyle="normal|bold"
-            android:textSize="18sp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
             android:textColor="@android:color/white"
-            android:layout_weight="1" />
+            android:layout_weight="0.53" />
 
-        <ImageView
-            android:layout_width="125dp"
-            android:layout_height="62dp"
-            android:id="@+id/imagePic"
-            android:cropToPadding="false"
-            android:adjustViewBounds="false"
-            android:scaleType="fitCenter" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/txtDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:textSize="14sp"
-        android:layout_weight="0.03"
-        android:textColor="@android:color/white" />
 
     <TextView
         android:layout_width="match_parent"
@@ -45,6 +42,6 @@
         android:id="@+id/txtDate"
         android:gravity="right"
         android:textColor="@android:color/white"
-        android:textAlignment="textEnd"/>
+        android:textAlignment="viewEnd" />
 
-</LinearLayout>
+    </LinearLayout>

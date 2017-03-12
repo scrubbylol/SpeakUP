@@ -12,7 +12,7 @@ public class MessageActivity extends AppCompatActivity implements AdapterView.On
     private String[] messageNames = new String[8];
     private String[] messageDesc = new String[8];
     private String[] messageDate = new String[8];
-    private int[] messagePic = new int[10];
+    private int[] messagePic = new int[8];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class MessageActivity extends AppCompatActivity implements AdapterView.On
         messageDesc[0] = "Hi kind friend";
         messageDate[0] = "2017-03-11 @ 4:10PM";
 
-        messagePic[1] = R.drawable.pic2;
-        messageNames[1] = "Ryan Haque";
-        messageDesc[1] = "I love this app!!!";
-        messageDate[1] = "2010-01-01 @ 5:10PM";
+        messagePic[1] = R.drawable.pic8;
+        messageNames[1] = "Anon1846128";
+        messageDesc[1] = "Yeah :/ I felt the same way before, things..";
+        messageDate[1] = "2017-03-10 @1:10PM";
 
         messagePic[2] = R.drawable.pic6;
         messageNames[2] = "Jacky Chen";
@@ -71,7 +71,16 @@ public class MessageActivity extends AppCompatActivity implements AdapterView.On
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        String sendName = messageNames[(int)id];
+        String sendDesc = messageDesc[(int)id];
+        String sendDate = messageDate[(int)id];
+        int sendPic = messagePic[(int)id];
+
         Intent intent = new Intent (this, PMActivity.class);
+        intent.putExtra("name", sendName);
+        intent.putExtra("desc", sendDesc);
+        intent.putExtra("date", sendDate);
+        intent.putExtra("pic", sendPic);
         startActivity(intent);
     }
 }

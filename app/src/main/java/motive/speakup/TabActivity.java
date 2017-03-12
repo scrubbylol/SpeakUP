@@ -69,6 +69,8 @@ public class TabActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        getSupportActionBar().setTitle("StartUP");
     }
 
     @Override
