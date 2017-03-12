@@ -9,4 +9,14 @@
     android:theme="@android:style/Theme.Material.Wallpaper.NoTitleBar"
     android:background="?android:attr/panelBackground">
 
+    <ListView
+        android:id="@+id/notificationsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        style="@style/Widget.AppCompat.ListView.Menu"
+        android:dividerHeight="1dp"
+        android:tag="msg" />
+
 </RelativeLayout>
