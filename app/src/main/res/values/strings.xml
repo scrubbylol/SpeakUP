@@ -71,6 +71,7 @@
         <item>-1</item>
     </string-array>
 
+    <string name="pref_title_sync_method">Sync method</string>
     <string-array name="pref_sync_method_titles">
         <item>Phone Call</item>
         <item>Video Call</item>

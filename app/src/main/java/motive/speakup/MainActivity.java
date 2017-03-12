@@ -1,6 +1,7 @@
 package motive.speakup;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     EditText username_field, password_field;
     ImageView logo;
     private int count = 0;
+    private boolean showDlg = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("name", sendName);
                     startActivity(intent);
                 }
+                else {
+                    CreateFailDlg();
+
+                }
             }
         });
 
@@ -54,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    void CreateFailDlg() {
+        AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
+
+        dlgAlert.setMessage("Incorrect username or password!");
+        dlgAlert.setTitle("Error");
+        dlgAlert.setPositiveButton("OK", null);
+        dlgAlert.setCancelable(true);
+        dlgAlert.create().show();
 
     }
 }
