@@ -28,7 +28,7 @@ public class PMActivity extends AppCompatActivity {
         messageDesc[0] = "Hey, I was wondering if you could assist me with my stress problem I've been having lately?";
         messageDate[0] = date;
 
-        messageWho[1] = "Them";
+        messageWho[1] = name;
         messageDesc[1] = "Sure friend! What did you wanna talk about?";
         messageDate[1] = date;
 
@@ -36,7 +36,7 @@ public class PMActivity extends AppCompatActivity {
         messageDesc[2] = "So, I'm currently in school right.. and a lot of assignments and exams have been hitting me all at once and im going crazy";
         messageDate[2] = date;
 
-        messageWho[3] = "Them";
+        messageWho[3] = name;
         messageDesc[3] = "Well you shouldn't have left it to the last second haha";
         messageDate[3] = date;
 
@@ -44,7 +44,7 @@ public class PMActivity extends AppCompatActivity {
         messageDesc[4] = "I know but its really stressful right now";
         messageDate[4] = date;
 
-        messageWho[5] = "Them";
+        messageWho[5] = name;
         messageDesc[5] = "It's okay man, keep your head up high and slowly plug away! You'll be get through them all one way or another";
         messageDate[5] = date;
 
@@ -52,7 +52,7 @@ public class PMActivity extends AppCompatActivity {
         messageDesc[6] = "But its alot of work...";
         messageDate[6] = date;
 
-        messageWho[7] = "Them";
+        messageWho[7] = name;
         messageDesc[7] = "Thats part of being in school which is a part of life";
         messageDate[7] = date;
 
@@ -60,7 +60,7 @@ public class PMActivity extends AppCompatActivity {
         messageDesc[8] = "Well.. yeah i guess";
         messageDate[8] = date;
 
-        messageWho[9] = "Them";
+        messageWho[9] = name;
         messageDesc[9] = "Ive been through it man. Its tough, but trust me it'll be worth it in the end (hopefully) :)";
         messageDate[9] = date;
 
@@ -68,8 +68,8 @@ public class PMActivity extends AppCompatActivity {
         messageDesc[10] = "LOL ur funny";
         messageDate[10] = date;
 
-        messageWho[11] = "Them";
-        messageDesc[11] = ":D I hope i somehow cheered you up. Now get to those books!";
+        messageWho[11] = name;
+        messageDesc[11] = desc;
         messageDate[11] = date;
 
 

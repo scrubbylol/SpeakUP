@@ -42,7 +42,7 @@ public class MessageActivity extends AppCompatActivity implements AdapterView.On
         messageDate[3] = "2011-01-10 @ 3:19PM";
 
         messagePic[4] = R.drawable.pic3;
-        messageNames[4] = "Guy Name1";
+        messageNames[4] = "NoRealName";
         messageDesc[4] = "It's okay buddy, you can do this";
         messageDate[4] = "2013-11-12 @ 11:52AM";
 

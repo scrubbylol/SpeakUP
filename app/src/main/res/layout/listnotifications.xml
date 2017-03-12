@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="5dp"
     android:weightSum="1">
 
-    <TextView
-        android:id="@+id/txtWho"
-        android:layout_width="match_parent"
-        android:textStyle="normal|bold"
-        android:textSize="16sp"
-        android:textColor="@android:color/white"
-        android:textAlignment="textStart"
-        android:text="you"
-        android:layout_height="20dp"
-        android:layout_marginBottom="5dp"/>
-
     <LinearLayout
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
-        android:layout_weight="0.10">
+        android:layout_height="55dp">
+
+        <ImageView
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imagePic"
+            android:cropToPadding="false"
+            android:adjustViewBounds="false"
+            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/txtDesc"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textSize="14sp"
-            android:textColor="@android:color/white"
-            android:layout_weight="0.53" />
-
+            android:layout_weight="1"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <TextView
@@ -42,6 +36,6 @@
         android:id="@+id/txtDate"
         android:gravity="right"
         android:textColor="@android:color/white"
-        android:textAlignment="viewEnd" />
+        android:textAlignment="textStart"/>
 
-    </LinearLayout>
+</LinearLayout>
