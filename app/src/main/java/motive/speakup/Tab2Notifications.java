@@ -23,7 +23,7 @@ public class Tab2Notifications extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.tab1news, container, false);
+        View rootView = inflater.inflate(R.layout.tab2notifications, container, false);
 
         messagePic[0] = R.drawable.pic0;
         messageDesc[0] = "Randy Nguyen has created a new post.";
@@ -55,7 +55,7 @@ public class Tab2Notifications extends Fragment {
 
         ListView listView = (ListView)rootView.findViewById(R.id.notificationsList);
 
-        CustomListNotifications adapter = new CustomListNotifications(this.getActivity(), messageDesc, messageDate, messagePic);
+        CustomListNotifications adapter = new CustomListNotifications(getActivity(), messageDesc, messageDate, messagePic);
         listView.setAdapter(adapter);
 
         return rootView;
