@@ -16,7 +16,10 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:text="How are you feeling today, [Name]?"
@@ -31,23 +34,35 @@
         <Button
             android:text="good"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/goodBtn"
             android:layout_marginTop="100dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:elevation="0dp"
+            android:drawableEnd="@drawable/smile"
+            android:paddingLeft="75dp"
+            android:layout_weight="0.01" />
 
         <Button
             android:text="neutral"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:id="@+id/neutralBtn"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="35dp"
+            android:drawableEnd="@drawable/neutral"
+            android:paddingLeft="75dp"
+            android:layout_weight="0.03" />
 
         <Button
             android:text="bad"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
             android:id="@+id/badBtn"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="35dp"
+            android:drawableEnd="@drawable/sad"
+            android:layout_weight="0.06"
+            android:paddingLeft="75dp" />
+
+
     </LinearLayout>
 </RelativeLayout>

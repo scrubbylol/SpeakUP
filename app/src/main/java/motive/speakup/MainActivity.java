@@ -1,5 +1,6 @@
 package motive.speakup;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
                     incorrect.setText("Incorrect email or password!");
                 }*/
 
-                setContentView(R.layout.activity_feel);
-                StartFeel();
+                //setContentView(R.layout.activity_feel);
+                Intent intent = new Intent (MainActivity.this, FeelActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                setContentView(R.layout.activity_news);
+                setContentView(R.layout.activity_tab);
                 StartMain("good");
             }
         });
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                setContentView(R.layout.activity_news);
+                setContentView(R.layout.activity_tab);
                 StartMain("neutral");
             }
         });
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                setContentView(R.layout.activity_news);
+                setContentView(R.layout.activity_tab);
                 StartMain("bad");
             }
         });

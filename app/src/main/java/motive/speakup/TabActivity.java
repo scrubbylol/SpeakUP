@@ -1,5 +1,8 @@
 package motive.speakup;
 
+import android.content.Intent;
+import android.media.Image;
+import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,9 +19,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
-public class NewsActivity extends AppCompatActivity {
+public class TabActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -38,7 +43,7 @@ public class NewsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
+        setContentView(R.layout.activity_tab);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -50,6 +55,8 @@ public class NewsActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -57,15 +64,17 @@ public class NewsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                Intent intent = new Intent (TabActivity.this, MessageActivity.class);
+                startActivity(intent);
             }
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_news_actiity, menu);
+        getMenuInflater().inflate(R.menu.menu_tab, menu);
         return true;
     }
 
@@ -84,6 +93,7 @@ public class NewsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -97,19 +107,18 @@ public class NewsActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             switch(position) {
-               /* case 0:
-                    Tab1Msgs tab1 = new Tab1Msgs();
+                case 0:
+                    Tab1News tab1 = new Tab1News();
                     return tab1;
                 case 1:
-                    Tab1Msgs tab2 = new Tab2News();
+                    Tab2Notifications tab2 = new Tab2Notifications();
                     return tab2;
                 case 2:
-                    Tab1Msgs tab3 = new Tab3Personal();
+                    Tab3Personal tab3 = new Tab3Personal();
                     return tab3;
                 default:
-                    return null; */
-           }
-            return null;
+                    return null;
+            }
         }
 
         @Override
@@ -122,9 +131,9 @@ public class NewsActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "MSGS";
-                case 1:
                     return "NEWS";
+                case 1:
+                    return "NOTIFICATIONS";
                 case 2:
                     return "PERSONAL";
             }
