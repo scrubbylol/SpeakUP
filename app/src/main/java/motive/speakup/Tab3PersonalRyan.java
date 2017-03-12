@@ -14,6 +14,7 @@ public class Tab3PersonalRyan extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tab3personalryan, container, false);
+
         return rootView;
     }
 }

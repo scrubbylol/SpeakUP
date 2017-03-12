@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 public class Tab4Tracking extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.tab1news, container, false);
+        View rootView = inflater.inflate(R.layout.tab4tracking, container, false);
         return rootView;
     }
 }

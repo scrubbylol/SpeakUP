@@ -68,11 +68,11 @@ public class TabActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setTitle("StartUP");
-
         Intent intent = getIntent(); // gets the previously created intent
         whichName = intent.getStringExtra("name");
         TextView feelText = (TextView) findViewById(R.id.feelText);
+
+        getSupportActionBar().setTitle("SpeakUP");
     }
 
     @Override
@@ -122,7 +122,6 @@ public class TabActivity extends AppCompatActivity {
                     Tab4Tracking tab4 = new Tab4Tracking();
                     return tab4;
                 case 3:
-
                     if (whichName.equals("ryan")) {
                         Tab3PersonalRyan tab3 = new Tab3PersonalRyan();
                         return tab3;

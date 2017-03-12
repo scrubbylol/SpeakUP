@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity"
-            android:theme="@style/PreferencesTheme"/>
+            android:parentActivityName=".TabActivity"/>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".FeelActivity" />
         <activity

@@ -60,7 +60,4 @@ public class Tab2Notifications extends Fragment {
 
         return rootView;
     }
-
-
-
 }

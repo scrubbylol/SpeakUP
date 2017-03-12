@@ -39,10 +39,4 @@
         android:positiveButtonText="@null"
         android:title="@string/distance" />
 
-
-
-
-
-
-
 </PreferenceScreen>
