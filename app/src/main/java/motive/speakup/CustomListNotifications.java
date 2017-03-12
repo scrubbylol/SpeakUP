@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static motive.speakup.R.id.imagePic;
+
 /**
  * Created by randy on 2017-03-11.
  */
@@ -21,7 +23,7 @@ public class CustomListNotifications extends ArrayAdapter<String> {
 
     public CustomListNotifications(Activity context,
                        String[] desc, String[] dates, int[] imagePic) {
-        super(context, R.layout.listmessages, desc);
+        super(context, R.layout.listnotifications, desc);
         this.context = context;
         this.desc = desc;
         this.dates = dates;
