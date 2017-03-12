@@ -15,6 +15,7 @@
         android:footerDividersEnabled="false"
         style="@style/Widget.AppCompat.ListView.Menu"
         android:dividerHeight="1dp"
-        android:tag="msg" />
+        android:tag="msg"
+        android:layout_marginBottom="200px"/>
 
 </RelativeLayout>

@@ -48,13 +48,21 @@
 
                 <ImageView
                     android:id="@+id/supporters"
-                    android:layout_width="62dp"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/rh"
                     android:layout_above="@+id/textView2"
                     android:layout_centerHorizontal="true"
                     tools:background="@android:color/background_light"
-                    android:background="@android:color/background_light" />
+                    android:layout_width="36dp" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/rh"
+                    android:layout_above="@+id/textView2"
+                    android:layout_centerHorizontal="true"
+                    tools:background="@android:color/background_light"
+                    android:layout_width="46dp" />
 
             </RelativeLayout>
 
@@ -122,6 +130,18 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:text="Ryan Haque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="5dp"
+        android:textStyle="normal|bold" />
 
 </RelativeLayout>
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -36,6 +37,7 @@ public class TabActivity extends AppCompatActivity {
     private ViewPager mViewPager;
 
     private String whichName;
+    public String mood;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +72,8 @@ public class TabActivity extends AppCompatActivity {
 
         Intent intent = getIntent(); // gets the previously created intent
         whichName = intent.getStringExtra("name");
+        mood = intent.getStringExtra("mood");
+
         TextView feelText = (TextView) findViewById(R.id.feelText);
 
         getSupportActionBar().setTitle("SpeakUP");

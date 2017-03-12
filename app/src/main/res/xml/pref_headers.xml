@@ -10,7 +10,7 @@
 
     <header
         android:fragment="motive.speakup.SettingsActivity$DataSyncPreferenceFragment"
-        android:icon="@drawable/rh"
+        android:icon="@drawable/rh2"
         android:title="Reminder" />
 
 

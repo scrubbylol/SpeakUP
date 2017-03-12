@@ -1,6 +1,7 @@
 package motive.speakup;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import org.w3c.dom.Text;
 public class FeelActivity extends AppCompatActivity {
 
     private String whichName;
+    private int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class FeelActivity extends AppCompatActivity {
 
         Intent intent = getIntent(); // gets the previously created intent
         whichName = intent.getStringExtra("name");
+        count = intent.getIntExtra("count", count);
         TextView feelText = (TextView) findViewById(R.id.feelText);
         feelText.setText("How are you feeling today, " + whichName + "?");
 
@@ -37,7 +40,10 @@ public class FeelActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                SendName();
+                Intent intent = new Intent(FeelActivity.this, TabActivity.class);
+                intent.putExtra("mood", "happy");
+                intent.putExtra("name", whichName);
+                startActivity(intent);
             }
         });
 
@@ -46,7 +52,10 @@ public class FeelActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                SendName();
+                Intent intent = new Intent(FeelActivity.this, TabActivity.class);
+                intent.putExtra("mood", "happy");
+                intent.putExtra("name", whichName);
+                startActivity(intent);
             }
         });
 
@@ -55,15 +64,15 @@ public class FeelActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                SendName();
+                Intent intent = new Intent(FeelActivity.this, Define_Feeling.class);
+                intent.putExtra("mood", "sad");
+                intent.putExtra("name", whichName);
+                count ++;
+                intent.putExtra("count", count);
+                startActivity(intent);
+
             }
         });
 
-    }
-
-    private void SendName() {
-        Intent intent = new Intent(FeelActivity.this, TabActivity.class);
-        intent.putExtra("name", whichName);
-        startActivity(intent);
     }
 }

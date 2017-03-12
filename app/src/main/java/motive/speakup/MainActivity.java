@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     String pass = "pass";
     EditText username_field, password_field;
     ImageView logo;
+    private int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

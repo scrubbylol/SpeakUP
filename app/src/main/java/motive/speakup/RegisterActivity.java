@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 public class RegisterActivity extends AppCompatActivity {
 
     static boolean anonymous = false;
+    private String uName;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,9 @@ public class RegisterActivity extends AppCompatActivity {
         EditText name = (EditText)findViewById(R.id.username_field);
         EditText pass = (EditText)findViewById(R.id.password_field);
         EditText phone = (EditText)findViewById(R.id.phonenumber_field);
+
+        uName = name.getText().toString();
+
         final Intent intent = new Intent(this, FeelActivity.class);
 
         if(name.getText().toString().equals("") || pass.getText().toString().equals("") || phone.getText().toString().equals("")){
@@ -54,6 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 public void onClick(DialogInterface dialog, int which) {
                     // Do nothing but close the dialog
+                    intent.putExtra("name", uName);
                     startActivity(intent);
                     dialog.dismiss();
                 }

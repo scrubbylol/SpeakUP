@@ -26,7 +26,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_margin="15dp"
-        android:paddingTop="40dp"
+        android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/logo" />
@@ -41,12 +41,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="2"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="25dp">
 
                 <EditText
                     android:layout_width="match_parent"
@@ -61,7 +63,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
 
                 <EditText
                     android:layout_width="match_parent"

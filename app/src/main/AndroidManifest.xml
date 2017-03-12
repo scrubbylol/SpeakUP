@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity"
-            android:parentActivityName=".TabActivity"/>
+            android:parentActivityName=".TabActivity" />
+        <activity android:name=".Define_Feeling"/>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".FeelActivity" />
         <activity

@@ -39,4 +39,10 @@
         android:positiveButtonText="@null"
         android:title="@string/distance" />
 
+    <ListPreference
+        android:defaultValue="-1"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Delete account" />
+
 </PreferenceScreen>
